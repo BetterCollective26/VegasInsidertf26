@@ -1,12 +1,12 @@
 {
   "test.html": {
     "brand": "VegasInsider",
-    "table_title": "Test",
+    "table_title": "test",
     "file": "test.html",
     "pages_url": "https://bettercollective26.github.io/VegasInsidertf26/test.html",
     "github_repo_url": "https://github.com/bettercollective26/VegasInsidertf26",
     "created_by": "gauthambc",
-    "created_at_utc": "2026-02-09 01:53:34 UTC",
+    "created_at_utc": "2026-02-09 20:13:06 UTC",
     "bundle_path": "bundles/test.html.json",
     "has_bundle": true
   },
