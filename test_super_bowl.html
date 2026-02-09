@@ -1,10 +1,10 @@
-<!-- BT_PUBLISH_HASH:bar_columns=[]|bar_fixed_w=200|bar_max_overrides={}|brand='VegasInsider'|branded_title_color=True|cell_align='Center'|center_titles=False|footer_logo_align='Center'|footer_logo_h=36|footer_notes=''|header_style='Keep original'|heat_columns=[]|heat_overrides={}|heat_strength=0.55|heatmap_style='Branded heatmap'|show_embed=True|show_footer=True|show_footer_notes=False|show_header=True|show_heat_scale=False|show_page_numbers=True|show_pager=True|show_search=True|striped=True|subtitle='Subheading'|title='Test 2' -->
+<!-- BT_PUBLISH_HASH:bar_columns=[]|bar_fixed_w=200|bar_max_overrides={}|brand='VegasInsider'|branded_title_color=True|cell_align='Center'|center_titles=False|footer_logo_align='Center'|footer_logo_h=36|footer_notes=''|header_style='Keep original'|heat_columns=[]|heat_overrides={}|heat_strength=0.55|heatmap_style='Branded heatmap'|show_embed=True|show_footer=True|show_footer_notes=False|show_header=True|show_heat_scale=False|show_page_numbers=True|show_pager=True|show_search=True|striped=True|subtitle='Subheading'|title='Test 123' -->
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Test 2</title>
+<title>Test 123</title>
 
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
@@ -524,9 +524,10 @@
 
     /* zebra */
     
-    #bt-block tbody tr:not(.dw-empty):nth-child(odd) td{background:var(--stripe);}
-    #bt-block tbody tr:not(.dw-empty):nth-child(even) td{background:#ffffff;}
-
+    #bt-block tbody tr:not(.dw-empty) td{ background:#ffffff; } /* base */
+    #bt-block tbody tr.dw-zebra-odd  td{ background:var(--stripe); } /* striped */
+    #bt-block tbody tr.dw-zebra-even td{ background:#ffffff; }       /* plain */
+    
 
     #bt-block tbody tr:hover td{ background:var(--hover) !important; }
     #bt-block tbody tr:hover{
@@ -709,7 +710,7 @@
 
   <!-- Header -->
   <div class="vi-table-header  ">
-    <span class="title branded">Test 2</span>
+    <span class="title branded">Test 123</span>
     <span class="subtitle">Subheading</span>
   </div>
 
@@ -1268,6 +1269,16 @@
       pageStatus.textContent = "Page " + page + " Of " + pages;
     }
 
+    function applyVisibleZebra() {
+      const rows = Array.from(tb.rows)
+        .filter(tr => !tr.classList.contains('dw-empty') && tr.style.display !== 'none');
+    
+      rows.forEach((tr, i) => {
+        tr.classList.remove('dw-zebra-even', 'dw-zebra-odd');
+        tr.classList.add(i % 2 === 0 ? 'dw-zebra-odd' : 'dw-zebra-even');
+      });
+    }
+
     function renderPage(){
       const ordered = Array.from(tb.rows).filter(r=>!r.classList.contains('dw-empty'));
       const visible = ordered.filter(matchesFilter);
@@ -1305,6 +1316,7 @@
       shown.forEach(r=>{ r.style.display='table-row'; });
 
       scroller.scrollTop = 0;
+      applyVisibleZebra();
     }
 
     if(hasSearch){
