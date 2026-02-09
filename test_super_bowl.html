@@ -1,10 +1,10 @@
-<!-- BT_PUBLISH_HASH:bar_columns=[]|bar_fixed_w=200|bar_max_overrides={}|brand='VegasInsider'|branded_title_color=True|cell_align='Center'|center_titles=False|footer_logo_align='Center'|footer_logo_h=36|footer_notes=''|header_style='Keep original'|heat_columns=[]|heat_overrides={}|heat_strength=0.55|heatmap_style='Branded heatmap'|show_embed=True|show_footer=True|show_footer_notes=False|show_header=True|show_heat_scale=False|show_page_numbers=True|show_pager=True|show_search=True|striped=True|subtitle='Subheading'|title='Table 1' -->
+<!-- BT_PUBLISH_HASH:bar_columns=[]|bar_fixed_w=200|bar_max_overrides={}|brand='VegasInsider'|branded_title_color=True|cell_align='Center'|center_titles=False|footer_logo_align='Center'|footer_logo_h=36|footer_notes=''|header_style='Keep original'|heat_columns=[]|heat_overrides={}|heat_strength=0.55|heatmap_style='Branded heatmap'|show_embed=True|show_footer=True|show_footer_notes=False|show_header=True|show_heat_scale=False|show_page_numbers=True|show_pager=True|show_search=True|striped=True|subtitle='Subheading'|title='Test 2' -->
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Table 1</title>
+<title>Test 2</title>
 
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
@@ -709,7 +709,7 @@
 
   <!-- Header -->
   <div class="vi-table-header  ">
-    <span class="title branded">Table 1</span>
+    <span class="title branded">Test 2</span>
     <span class="subtitle">Subheading</span>
   </div>
 
@@ -1169,17 +1169,37 @@
     let pageSize = hasPager ? (parseInt(sizeSel.value,10) || 10) : 0;
     let page = 1;
     let filter = '';
+    filter = (searchInput?.value || '').toLowerCase().trim();
 
     function isFilterActive(){
-      return !!(filter && filter.trim().length);
+      const typed = (searchInput && typeof searchInput.value === 'string')
+        ? searchInput.value.trim()
+        : '';
+      const live = (filter || '').trim();
+      return typed.length > 0 || live.length > 0;
     }
+
     
     function syncMenuOptions(){
       const filtered = isFilterActive();
-      if (btnCsvCurrent) btnCsvCurrent.classList.toggle('vi-hide', !filtered);
-      if (btnImgCurrent) btnImgCurrent.classList.toggle('vi-hide', !filtered);
+    
+      // Full-table options
+      if (btnTop10)   btnTop10.classList.toggle('vi-hide', filtered);
+      if (btnBottom10) btnBottom10.classList.toggle('vi-hide', filtered);
+      if (btnCsv)     btnCsv.classList.toggle('vi-hide', filtered);
+      if (btnEmbed)   btnEmbed.classList.toggle('vi-hide', filtered);
+    
+      // Current-view options
+      if (btnCsvCurrent)  btnCsvCurrent.classList.toggle('vi-hide', !filtered);
+      if (btnImgCurrent)  btnImgCurrent.classList.toggle('vi-hide', !filtered);
       if (btnHtmlCurrent) btnHtmlCurrent.classList.toggle('vi-hide', !filtered);
+    
+      // Optional title clarity
+      if (menuTitle){
+        menuTitle.textContent = filtered ? 'Current view actions' : 'Choose action';
+      }
     }
+
 
     const onScrollShadow = ()=> scroller.classList.toggle('scrolled', scroller.scrollTop > 0);
     scroller.addEventListener('scroll', onScrollShadow); onScrollShadow();
