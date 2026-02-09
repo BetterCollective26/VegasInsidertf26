@@ -3,8 +3,8 @@
   "widget_file_name": "test.html",
   "brand": "VegasInsider",
   "created_by": "gauthambc",
-  "created_at_utc": "2026-02-09 01:53:33 UTC",
-  "table_name_words": "Test",
+  "created_at_utc": "2026-02-09 20:13:05 UTC",
+  "table_name_words": "test",
   "widget_title": "",
   "widget_subtitle": "",
   "config": {
@@ -36,7 +36,7 @@
     "header_style": "Keep original"
   },
   "col_format_rules": {},
-  "csv": "RANK,CITY,SUPER BOWL TICKET BURDEN INDEX (0\u2013100),WORK HOURS (PER TICKET),RENT MONTHS (PER TICKET),TRANSPORT MONTHS (PER TICKET),CHILDCARE MONTHS (PER TICKET),UTILITIES MONTHS (PER TICKET),GROCERY MONTHS (PER TICKET)\n47,\"Lansing, Michigan\",44.92,238,7.39,22.38,10.44,38.14,14.72\n83,\"Grand Rapids, Michigan\",41.32,196,4.05,22.38,7.45,55.01,14.72\n110,\"Sterling Heights, Michigan\",39.42,160,9.51,22.38,4.94,32.56,14.72\n120,\"Detroit, Michigan\",38.73,320,4.61,22.38,4.83,32.59,14.72\n131,\"Dearborn, Michigan\",37.86,187,7.53,22.38,5.42,32.59,14.72\n185,\"Ann Arbor, Michigan\",33.36,154,3.36,22.38,3.69,46.8,14.72\n194,\"Warren, Michigan\",32.39,196,6.92,22.38,5.48,16.93,14.72\n",
+  "csv": "RANK,CITY,SUPER BOWL TICKET BURDEN INDEX (0\u2013100),WORK HOURS (PER TICKET),RENT MONTHS (PER TICKET),TRANSPORT MONTHS (PER TICKET),CHILDCARE MONTHS (PER TICKET),UTILITIES MONTHS (PER TICKET),GROCERY MONTHS (PER TICKET)\n91,\"Springfield, Massachusetts\",40.54,254,6.85,24.13,8.83,29.26,14.11\n124,\"New Bedford, Massachusetts\",38.27,221,4.52,24.13,1.98,52.1,14.11\n200,\"Lowell, Massachusetts\",31.98,166,4.1,24.13,4.84,35.92,14.11\n210,\"Worcester, Massachusetts\",31.42,192,3.58,24.13,3.93,35.03,14.11\n248,\"Quincy, Massachusetts\",26.48,133,2.45,24.13,3.69,33.41,14.11\n259,\"Lynn, Massachusetts\",25.48,173,3.19,24.13,3.69,21.26,14.11\n264,\"Boston, Massachusetts\",25.0,136,1.97,24.13,2.4,33.41,14.11\n267,\"Cambridge, Massachusetts\",24.7,100,2.15,24.13,2.4,36.55,14.11\n270,\"Brockton, Massachusetts\",24.34,163,2.71,24.13,3.69,21.26,14.11\n",
   "hidden_cols": [],
   "bar_columns": [],
   "bar_max_overrides": {},
