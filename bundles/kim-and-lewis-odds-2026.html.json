@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "widget_file_name": "kim-and-lewis-odds-2026.html",
+  "brand": "VegasInsider",
+  "created_by": "gauthambc",
+  "created_at_utc": "2026-02-10 11:43:34 UTC",
+  "table_name_words": "Kim and Lewis odds 2026",
+  "widget_title": "",
+  "widget_subtitle": "",
+  "config": {
+    "brand": "VegasInsider",
+    "title": "Table 1",
+    "subtitle": "Subheading",
+    "striped": true,
+    "show_header": true,
+    "center_titles": false,
+    "branded_title_color": true,
+    "show_footer": true,
+    "footer_logo_align": "Center",
+    "footer_logo_h": 36,
+    "show_footer_notes": false,
+    "footer_notes": "",
+    "show_heat_scale": false,
+    "cell_align": "Center",
+    "show_search": true,
+    "show_pager": true,
+    "show_embed": true,
+    "show_page_numbers": true,
+    "bar_columns": [],
+    "bar_max_overrides": {},
+    "bar_fixed_w": 200,
+    "heat_columns": [],
+    "heat_overrides": {
+      "Implied Probability": {}
+    },
+    "heat_strength": 0.55,
+    "heatmap_style": "Branded heatmap",
+    "header_style": "Keep original"
+  },
+  "col_format_rules": {},
+  "csv": "Market,Implied Probability,Fractional Odds,American Odds,Implied Probability.1\nKim Kardashian & Lewis Hamilton to be seen kissing during an F1 weekend in 2026,61.90%,8/13,-163,61.90%\nKim Kardashian & Lewis Hamilton seen together at the 2026 Met Gala,40.00%,6/4,150,40.00%\nRelationship publicly confirmed (interview or social post),28.60%,5/2,250,28.60%\n\"Split before Dec 31, 2026\",18.20%,9/2,450,18.20%\n\"Married before Super Bowl LXI (Feb 14, 2027)\",12.50%,7/1,700,12.50%\n",
+  "hidden_cols": [],
+  "bar_columns": [],
+  "bar_max_overrides": {},
+  "heat_columns": [],
+  "heat_overrides": {
+    "Implied Probability": {}
+  }
+}
