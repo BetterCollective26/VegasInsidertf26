@@ -20,5 +20,16 @@
     "created_at_utc": "2026-02-09 19:18:37 UTC",
     "bundle_path": "bundles/test_super_bowl.html.json",
     "has_bundle": true
+  },
+  "kim-and-lewis-odds-2026.html": {
+    "brand": "VegasInsider",
+    "table_title": "Kim and Lewis odds 2026",
+    "file": "kim-and-lewis-odds-2026.html",
+    "pages_url": "https://bettercollective26.github.io/VegasInsidertf26/kim-and-lewis-odds-2026.html",
+    "github_repo_url": "https://github.com/bettercollective26/VegasInsidertf26",
+    "created_by": "gauthambc",
+    "created_at_utc": "2026-02-10 11:43:35 UTC",
+    "bundle_path": "bundles/kim-and-lewis-odds-2026.html.json",
+    "has_bundle": true
   }
 }
